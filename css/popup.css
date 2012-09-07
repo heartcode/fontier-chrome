@@ -17,7 +17,7 @@ body, html {
 #font_size_list li {
   border-radius: 3px;
   padding: 0 4px;
-  border: 1px solid #dae4ef;
+  border: 1px solid #DDD;
   color: #999;
   cursor: pointer;
   line-height: 36px;
@@ -47,9 +47,9 @@ body, html {
   margin-bottom: 0;
 }
 #font_size_list li:hover {
-  color: #222;
-  background: #fcfdff;
-  border: 1px solid #dae4ef;
+  color: #eee;
+  background: #555;
+  border: 1px solid #333;
 }
 #font_size_list  li.selected {
   color: #efefef;
