@@ -1,15 +1,26 @@
-if (typeof Fontier == "undefined" || !ColorZilla) {var Fontier = {}};
+if (typeof Fontier == "undefined" || !Fontier) {var Fontier = {}};
 
 var ft = Fontier;
-ft.defaultFontSize = 12.5;
+ft.fontSize = localStorage["ft.fontSize"] ? parseInt(localStorage["ft.fontSize"]) : 16;
 
 ft.handleClick = function() {
   if (!$(this).hasClass('selected')) {
-    chrome.experimental.fontSettings.setDefaultFontSize({pixelSize: parseInt($(this).data('size'))});
+    var size = parseInt($(this).data('size'));
+    localStorage.setItem('ft.fontSize', size);
+
+    chrome.experimental.fontSettings.setDefaultFontSize({pixelSize: size});
 
     $("#font_size_list li.selected").removeClass('selected');
     $(this).addClass('selected');
   }
 };
 
-$("#font_size_list li").on('click', ft.handleClick);
+$(document).ready(function() {
+  $("#font_size_list li").each(function(index, item) {
+    if (parseInt($(item).data('size')) == ft.fontSize) {
+      $(this).addClass('selected');
+      console.log([item, ft.fontSize]);
+    }
+  });
+  $("#font_size_list li").on('click', ft.handleClick);
+});
