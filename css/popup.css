@@ -1,0 +1,59 @@
+body, html {
+  font-family: "Helvetica Neue";
+  margin: 0;
+  padding: 1px;
+}
+#popup_wrapper {
+  position: relative;
+  background: #f9f9f9;
+  border-radius: 3px;
+  border: 1px solid #dcd9d5;
+}
+#font_size_list {
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+}
+#font_size_list li {
+  border-radius: 3px;
+  padding: 0 4px;
+  border: 1px solid #dae4ef;
+  color: #999;
+  cursor: pointer;
+  line-height: 36px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 4px;
+
+  -webkit-transition: color ease-out 0.2s,
+                      background ease-out 0.2s,
+                      border ease-out 0.2s;
+}
+#font_size_list li:nth-child(1) {
+  font-size:7px;
+}
+#font_size_list li:nth-child(2) {
+  font-size:10px;
+}
+#font_size_list li:nth-child(3) {
+  font-size:16px;
+}
+#font_size_list li:nth-child(4) {
+  font-size:21px;
+}
+#font_size_list li:nth-child(5) {
+  font-size:28px;
+  margin-bottom: 0;
+}
+#font_size_list li:hover {
+  color: #222;
+  background: #fcfdff;
+  border: 1px solid #dae4ef;
+}
+#font_size_list  li.selected {
+  color: #efefef;
+  background: #333;
+  border: 1px solid #666;
+  cursor: default;
+}
