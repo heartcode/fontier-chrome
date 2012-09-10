@@ -4,7 +4,6 @@ body, html {
   padding: 1px;
 }
 #popup_wrapper {
-  position: relative;
   background: #f9f9f9;
   border-radius: 3px;
   border: 1px solid #dcd9d5;

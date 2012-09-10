@@ -1,12 +1,10 @@
 if (typeof Fontier == "undefined" || !Fontier) {var Fontier = {}};
 
 var ft = Fontier;
-ft.fontSize = localStorage["ft.fontSize"] ? parseInt(localStorage["ft.fontSize"]) : 16;
 
 ft.handleClick = function() {
   if (!$(this).hasClass('selected')) {
     var size = parseInt($(this).data('size'));
-    localStorage.setItem('ft.fontSize', size);
 
     chrome.experimental.fontSettings.setDefaultFontSize({pixelSize: size});
 
@@ -15,12 +13,20 @@ ft.handleClick = function() {
   }
 };
 
-$(document).ready(function() {
+ft.getDefaultFontSize = function() {
+  console.log("getDefaultFontSize!");
+  chrome.experimental.fontSettings.getDefaultFontSize({}, ft.setDefaultFontSize);
+};
+
+ft.setDefaultFontSize = function(font) {
   $("#font_size_list li").each(function(index, item) {
-    if (parseInt($(item).data('size')) == ft.fontSize) {
+    if (parseInt($(item).data('size')) == font.pixelSize) {
       $(this).addClass('selected');
-      console.log([item, ft.fontSize]);
     }
   });
+};
+
+$(document).ready(function() {
+  ft.getDefaultFontSize();
   $("#font_size_list li").on('click', ft.handleClick);
 });
