@@ -23,8 +23,8 @@ Unfortunately until a Chrome extension uses any experimental features, it cannot
 ##Compatibility
 **Fontier** is compatible with Chrome 16.0.912 and later versions
 
-##Bugs
-There is a bug in the native Chrome font size settings. After the font size is changed in **Fontier**, the user can't change the font size using the Chrome settings for some reason (Blinking issue). Hopefully in forthcoming versions of Chrome this bug (which I believe is with the experimental API) will be eliminated.
+##Issues
+There is a bug in the native Chrome font size settings. After the font size is changed in **Fontier**, the user can't change the font size using the Chrome settings for some reason ([issue 1](https://github.com/heartcode/fontier-chrome/issues/1)). Hopefully in forthcoming versions of Chrome this bug (which I believe is with the experimental API) will be eliminated.
 
 If you experience any issues, please let me know using the [Github issues page](https://github.com/heartcode/fontier-chrome/issues).
 
