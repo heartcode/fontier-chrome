@@ -1,7 +1,7 @@
-body, html {
+body {
   font-family: "Helvetica Neue";
   margin: 0;
-  padding: 1px;
+  padding: 8px;
 }
 #popup_wrapper {
   background: #f9f9f9;
@@ -10,8 +10,8 @@ body, html {
 }
 #font_size_list {
   list-style: none;
-  margin: 0;
-  padding: 4px;
+  margin: 8px;
+  padding: 0;
 }
 #font_size_list li {
   border-radius: 3px;
@@ -23,7 +23,7 @@ body, html {
   height: 36px;
   text-align: center;
   vertical-align: middle;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 
   -webkit-transition: color ease-out 0.2s,
                       background ease-out 0.2s,

@@ -17,7 +17,9 @@ Check out these screenshots to to see how **Fontier**: does the magic:
 Unfortunately until a Chrome extension uses any experimental features, it cannot be added to the Chrome Web Store. If you would like to try the extension, follow these steps:
 
 1. Clone the repository:
-```git clone git@github.com:heartcode/fontier-chrome.git```
+
+	```git clone git@github.com:heartcode/fontier-chrome.git```
+	
 2. Open [chrome://flags](chrome://flags) in Chrome and enable **Experimental Extension APIs**
 2. Open  [chrome://extensions](chrome://extensions) in Chrome
 3. Select the **'Developer mode'** option on the upper-right corner
@@ -27,9 +29,14 @@ Unfortunately until a Chrome extension uses any experimental features, it cannot
 ##Compatibility
 **Fontier** is compatible with Chrome 16.0.912 and later versions
 
-##Issues
-There is a bug in the native Chrome font size settings. After the font size is changed in **Fontier**, the user can't change the font size using the Chrome settings for some reason ([issue 1](https://github.com/heartcode/fontier-chrome/issues/1)). Hopefully in forthcoming versions of Chrome this bug (which I believe is with the experimental API) will be eliminated.
+##Changelog
+**10/09/2012:**
+v0.1 - Initial release  
 
+**11/09/2012:**
+v0.2 - Fixed [issue #2](https://github.com/heartcode/fontier-chrome/issues/2)
+
+##Issue tracking
 If you experience any issues, please let me know using the [Github issues page](https://github.com/heartcode/fontier-chrome/issues).
 
 ##Licensing
