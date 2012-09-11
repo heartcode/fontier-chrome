@@ -1,4 +1,6 @@
-![](https://github.com/heartcode/fontier-chrome/raw/master/img/icon_48.png) #Fontier for Chrome
+![](https://github.com/heartcode/fontier-chrome/raw/master/img/icon_48.png)
+
+Fontier for Chrome
 ===
 
 **Fontier** is an experimental Chrome extension, that helps Chrome users to change the default font size in the browser very easily.
