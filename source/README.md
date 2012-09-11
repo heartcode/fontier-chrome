@@ -1,17 +1,30 @@
 #Fontier for Chrome
 ===
 
-**Fontier** is a Chrome extension, that helps Chrome users to change the default font size in the browser very easily.
+**Fontier** is an experimental Chrome extension, that helps Chrome users to change the default font size in the browser very easily.
 
 I created this extension, because I work a lot with [responsive websites](http://viljamis.com/blog/2012/typography/), where we use relative (em) units for the content, and I needed a better way of changing the font size in Chrome (this setting is well hidden at the moment in the advanced settings).
 
-**The extension uses the experimental Chrome API**, which means that users might need to enable the experimental features under the flags ([chrome://flags](chrome://flags/)), if they haven't already.
+**The extension uses the experimental Chrome API**, which means that users might need to enable the experimental features under the flags ([chrome://flags](chrome://flags)), if they haven't already.
+
+##Installation
+Unfortunately until a Chrome extension uses any experimental features, it cannot be added to the Chrome Web Store. If you would like to try the extension, follow these steps:
+
+1. Clone the repository:
+```git clone git@github.com:heartcode/fontier-chrome.git```
+2. Open [chrome://flags](chrome://flags) in Chrome and enable **Experimental Extension APIs**
+2. Open  [chrome://extensions](chrome://extensions) in Chrome
+3. Select the **'Developer mode'** option on the upper-right corner
+2. Click the **'Load unpacked extension…'** button and select the **fontier-chrome/source** folder
+3. The little [] icon should appear in the toolbar and the extension should be ready to roll.
 
 ##Compatibility
 The extension was built using the experimental API, which has not yet been finished, and might change in the future. At the moment I seem to be unable when exactly the fontSettings part of the experimental API was introduced, and which versions of Chrome **Fontier** is compatible with.
 
 ##Bugs
 There is a bug in the native Chrome font size settings. After the font size is changed in **Fontier**, the user can't change the font size using the Chrome settings for some reason (Blinking issue). Hopefully in forthcoming versions of Chrome this bug (which I believe is with the experimental API) will be eliminated.
+
+If you experience any issues, please let me know using Github Issues [].
 
 ##Licensing
 (The MIT License)
