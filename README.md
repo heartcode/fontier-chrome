@@ -9,6 +9,10 @@ I created this extension, because I work a lot with [responsive websites](http:/
 
 **The extension uses the experimental Chrome API**, which means that users might need to enable the experimental features under the flags ([chrome://flags](chrome://flags)), if they haven't already.
 
+##But what is it again?
+Check out these screenshots to to see how **Fontier**: does the magic:
+[http://www.flickr.com/photos/justbrq/sets/72157631509613949/with/7975619636/](http://www.flickr.com/photos/justbrq/sets/72157631509613949/with/7975619636/)
+
 ##Installation
 Unfortunately until a Chrome extension uses any experimental features, it cannot be added to the Chrome Web Store. If you would like to try the extension, follow these steps:
 
