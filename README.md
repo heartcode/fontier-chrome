@@ -1,4 +1,4 @@
-#Fontier for Chrome
+![](https://github.com/heartcode/fontier-chrome/raw/master/img/icon_48.png) #Fontier for Chrome
 ===
 
 **Fontier** is an experimental Chrome extension, that helps Chrome users to change the default font size in the browser very easily.
@@ -15,8 +15,8 @@ Unfortunately until a Chrome extension uses any experimental features, it cannot
 2. Open [chrome://flags](chrome://flags) in Chrome and enable **Experimental Extension APIs**
 2. Open  [chrome://extensions](chrome://extensions) in Chrome
 3. Select the **'Developer mode'** option on the upper-right corner
-2. Click the **'Load unpacked extension…'** button and select the **fontier-chrome/source** folder
-3. The little [] icon should appear in the toolbar and the extension should be ready to roll.
+2. Click the **'Load unpacked extension…'** button and select the **fontier-chrome** folder
+3. The little ![](https://github.com/heartcode/fontier-chrome/raw/master/img/icon_16.png) icon should appear in the toolbar and the extension should be ready to go.
 
 ##Compatibility
 The extension was built using the experimental API, which has not yet been finished, and might change in the future. At the moment I seem to be unable when exactly the fontSettings part of the experimental API was introduced, and which versions of Chrome **Fontier** is compatible with.
@@ -24,7 +24,7 @@ The extension was built using the experimental API, which has not yet been finis
 ##Bugs
 There is a bug in the native Chrome font size settings. After the font size is changed in **Fontier**, the user can't change the font size using the Chrome settings for some reason (Blinking issue). Hopefully in forthcoming versions of Chrome this bug (which I believe is with the experimental API) will be eliminated.
 
-If you experience any issues, please let me know using Github Issues [].
+If you experience any issues, please let me know using the [Github issues page](https://github.com/heartcode/fontier-chrome/issues).
 
 ##Licensing
 (The MIT License)
