@@ -21,7 +21,7 @@ Unfortunately until a Chrome extension uses any experimental features, it cannot
 3. The little ![](https://github.com/heartcode/fontier-chrome/raw/master/img/icon_16.png) icon should appear in the toolbar and the extension should be ready to go.
 
 ##Compatibility
-The extension was built using the experimental API, which has not yet been finished, and might change in the future. At the moment I seem to be unable when exactly the fontSettings part of the experimental API was introduced, and which versions of Chrome **Fontier** is compatible with.
+**Fontier** is compatible with Chrome 16.0.912 and later versions
 
 ##Bugs
 There is a bug in the native Chrome font size settings. After the font size is changed in **Fontier**, the user can't change the font size using the Chrome settings for some reason (Blinking issue). Hopefully in forthcoming versions of Chrome this bug (which I believe is with the experimental API) will be eliminated.
