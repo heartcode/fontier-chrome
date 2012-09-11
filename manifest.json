@@ -3,7 +3,7 @@
   "version" : "0.2",
   "minimum_chrome_version": "16.0.912",
   "manifest_version": 2,
-  "description" : "The quickest way to change the default font size in Chrome. Great for testing Responsive websites using em units.",
+  "description" : "The quickest way to change the default font size in Chrome. Great for testing Responsive websites using em and percentage units.",
   "permissions": ["experimental"],
   "icons": {
     "16": "/img/icon_16.png",

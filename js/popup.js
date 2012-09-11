@@ -11,7 +11,7 @@ ft.handleClick = function(e) {
     $(this).addClass('selected');
 
     // Tracking the default font size
-    _gaq.push(['_trackEvent', 'setFontSize', size]);
+    _gaq.push(['_trackEvent', 'setFontSize', size.toString()]);
   }
 };
 
@@ -20,7 +20,7 @@ ft.getDefaultFontSize = function() {
 };
 ft.setDefaultFontSize = function(font) {
   // Tracking the default font size
-  _gaq.push(['_trackEvent', 'getFontSize', font.pixelSize]);
+  _gaq.push(['_trackEvent', 'getFontSize', font.pixelSize.toString()]);
 
   $("#font_size_list li").each(function(index, item) {
     if (parseInt($(item).data('size')) == font.pixelSize) {
