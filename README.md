@@ -3,36 +3,38 @@
 Fontier for Chrome
 ===
 
-**Fontier** is an experimental Chrome extension, that helps Chrome users to change the default font size in the browser very easily.
+**Fontier** is a Chrome extension, that helps Chrome users to change the default font size in the browser very easily.
 
-I created this extension, because I work a lot with [responsive websites](http://viljamis.com/blog/2012/typography/), where we use relative (em) units for the content, and I needed a better way of changing the font size in Chrome (this setting is well hidden at the moment in the advanced settings).
-
-**The extension uses the experimental Chrome API**, which means that users might need to enable the experimental features under the flags ([chrome://flags](chrome://flags)), if they haven't already.
+I created this extension, because I work a lot with [responsive websites](http://viljamis.com/blog/2012/typography/), where we use relative (em) units for the content, and I needed a better and easier way to change the font size in Chrome (this setting is well hidden at the moment in the advanced settings).
 
 ##But what is it again?
 Check out these screenshots to to see how **Fontier** does the magic:
 [http://www.flickr.com/photos/justbrq/sets/72157631509613949/with/7975619636/](http://www.flickr.com/photos/justbrq/sets/72157631509613949/with/7975619636/)
 
 ##Installation
-Unfortunately until a Chrome extension uses any experimental features, it cannot be added to the Chrome Web Store. If you would like to try the extension, follow these steps:
+The latest stable version of the extension can be installed from the Google Web Store:
+[https://chrome.google.com/webstore/detail/fontier/dkbamaalakfhckcidgiigdinhcncaeae](https://chrome.google.com/webstore/detail/fontier/dkbamaalakfhckcidgiigdinhcncaeae)
+
+If you would like to try the unpacked version of the extension, follow these steps:
 
 1. Clone the repository:
 ```git clone git@github.com:heartcode/fontier-chrome.git```
-2. Open [chrome://flags](chrome://flags) in Chrome and enable **Experimental Extension APIs**
 2. Open  [chrome://extensions](chrome://extensions) in Chrome
 3. Select the **'Developer mode'** option on the upper-right corner
 2. Click the **'Load unpacked extension…'** button and select the **fontier-chrome** folder
 3. The little ![](https://github.com/heartcode/fontier-chrome/raw/master/img/icon_16.png) icon should appear in the toolbar and the extension should be ready to go.
 
 ##Compatibility
-**Fontier** is compatible with Chrome 16.0.912 and later versions
+**Fontier** is compatible with Chrome 22.0.1229.79 and later versions
 
 ##Issues
-There is a bug in the native Chrome font size settings. After the font size is changed in **Fontier**, the user can't change the font size using the Chrome settings for some reason ([issue 1](https://github.com/heartcode/fontier-chrome/issues/1)). Hopefully in forthcoming versions of Chrome this bug (which I believe is with the experimental API) will be eliminated.
+There is a bug in the native Chrome font size settings. After the font size is changed in **Fontier**, the user can't change the font size using the Chrome settings for some reason ([issue 1](https://github.com/heartcode/fontier-chrome/issues/1)). Hopefully in forthcoming versions of Chrome this bug will be eliminated.
 
 If you experience any issues, please let me know using the [Github issues page](https://github.com/heartcode/fontier-chrome/issues).
 
 ##Licensing
+The **Fontier** Chrome extension is an open source project and it is hosted on [Github](https://github.com/heartcode/fontier-chrome/).
+
 (The MIT License)
 
 Copyright (c) 2012 Róbert Pataki heartcode@robertpataki.com;

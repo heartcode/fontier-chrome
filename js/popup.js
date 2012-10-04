@@ -6,21 +6,21 @@ ft.analyticsCode = 'UA-19326313-14';
 ft.handleClick = function(e) {
   if (!$(this).hasClass('selected')) {
     var size = parseInt($(this).data('size'));
-    chrome.experimental.fontSettings.setDefaultFontSize({pixelSize: size});
+    chrome.fontSettings.setDefaultFontSize({pixelSize: size});
     $("#font_size_list li.selected").removeClass('selected');
     $(this).addClass('selected');
 
     // Tracking the default font size
-    _gaq.push(['_trackEvent', 'setFontSize', size.toString()]);
+    _gaq.push(['_trackEvent', 'fontSize', 'setFontSize', size.toString()]);
   }
 };
 
 ft.getDefaultFontSize = function() {
-  chrome.experimental.fontSettings.getDefaultFontSize({}, ft.setDefaultFontSize);
+  chrome.fontSettings.getDefaultFontSize({}, ft.setDefaultFontSize);
 };
 ft.setDefaultFontSize = function(font) {
   // Tracking the default font size
-  _gaq.push(['_trackEvent', 'getFontSize', font.pixelSize.toString()]);
+  _gaq.push(['_trackEvent', 'fontSize', 'getFontSize', font.pixelSize.toString()]);
 
   $("#font_size_list li").each(function(index, item) {
     if (parseInt($(item).data('size')) == font.pixelSize) {
