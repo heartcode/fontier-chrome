@@ -1,6 +1,6 @@
 {
   "name": "Fontier",
-  "version" : "0.3",
+  "version" : "0.4",
   "minimum_chrome_version": "22.0.1229.79",
   "manifest_version": 2,
   "description" : "The quickest way to change the default font size in Chrome. Great for testing Responsive websites using em and percentage units.",
