@@ -1,48 +1,45 @@
-if (typeof Fontier == "undefined" || !Fontier) {var Fontier = {}};
+(function(document, _gaq) {
+  var fontSizeList = document.getElementById('font_size_list'),
+  fontSizeListItems = fontSizeList.getElementsByTagName('li');
 
-var ft = Fontier;
-ft.analyticsCode = 'UA-19326313-14';
+  getDefaultFontSize();
+  addListItemClickEventHandlers();
 
-ft.handleClick = function(e) {
-  if (!$(this).hasClass('selected')) {
-    var size = parseInt($(this).data('size'));
-    chrome.fontSettings.setDefaultFontSize({pixelSize: size});
-    $("#font_size_list li.selected").removeClass('selected');
-    $(this).addClass('selected');
-
-    // Tracking the default font size
-    _gaq.push(['_trackEvent', 'fontSize', 'setFontSize', size.toString()]);
+  function getDefaultFontSize () {
+    chrome.fontSettings.getDefaultFontSize({}, setDefaultFontSize);
   }
-};
 
-ft.getDefaultFontSize = function() {
-  chrome.fontSettings.getDefaultFontSize({}, ft.setDefaultFontSize);
-};
-ft.setDefaultFontSize = function(font) {
-  // Tracking the default font size
-  _gaq.push(['_trackEvent', 'fontSize', 'getFontSize', font.pixelSize.toString()]);
+  function setDefaultFontSize (font) {
+    _gaq.push(['_trackEvent', 'fontSize', 'getFontSize', font.pixelSize.toString()]);
 
-  $("#font_size_list li").each(function(index, item) {
-    if (parseInt($(item).data('size')) == font.pixelSize) {
-      $(this).addClass('selected');
+    for (var i = 0, item; i < fontSizeListItems.length; i++ ) {
+      item = fontSizeListItems[i];
+      if (parseInt(item.getAttribute('data-size'), 10) == font.pixelSize) {
+        item.className = 'selected';
+      }
     }
-  });
-};
+  }
 
-$(document).ready(function() {
-  ft.getDefaultFontSize();
-  $("#font_size_list li").on('click', ft.handleClick);
-});
+  function listItemClick (e) {
+    var item = e.currentTarget,
+        size,
+        selectedListItem = fontSizeList.getElementsByClassName('selected')[0];
+    
+    selectedListItem.className = '';
 
-/*
-* Google Analytics tracking code
-*/
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', ft.analyticsCode]);
-_gaq.push(['_trackPageview']);
+    if (item.className != 'selected') {
+      size = parseInt(item.getAttribute('data-size'), 10);
+      chrome.fontSettings.setDefaultFontSize({pixelSize: size});
+      item.className = 'selected';
 
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = 'https://ssl.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+      _gaq.push(['_trackEvent', 'fontSize', 'setFontSize', size.toString()]);
+    }
+  }
+
+  function addListItemClickEventHandlers (e) {
+    for (var i = 0, item; i < fontSizeListItems.length; i++ ) {
+      item = fontSizeListItems[i];
+      item.addEventListener('click', listItemClick);
+    }
+  }
+})(document, _gaq);

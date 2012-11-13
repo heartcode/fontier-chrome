@@ -27,6 +27,15 @@ If you would like to try the unpacked version of the extension, follow these ste
 ##Compatibility
 **Fontier** is compatible with Chrome 22.0.1229.79 and later versions
 
+##Changelog
+###13/11/2012
+**Version 0.4** - Code refactoring.
+###04/10/2012
+**Version 0.3** - The 'fontSettings' API is no longer experimental. First public release in the Chrome Web Store.
+###11/09/2012
+**Version 0.2** - First release, temporarily uses the experimental 'fontSettings' API; Open Sourced and hosted on GitHub.
+
+
 ##Issues
 There is a bug in the native Chrome font size settings. After the font size is changed in **Fontier**, the user can't change the font size using the Chrome settings for some reason ([issue 1](https://github.com/heartcode/fontier-chrome/issues/1)). Hopefully in forthcoming versions of Chrome this bug will be eliminated.
 
