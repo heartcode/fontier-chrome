@@ -28,6 +28,8 @@ If you would like to try the unpacked version of the extension, follow these ste
 **Fontier** is compatible with Chrome 22.0.1229.79 and later versions
 
 ##Changelog
+###16/11/2012
+**Version 0.5** - [Trailing slash bug](http://heartcode.github.com/blog/2012/11/15/fixing-the-trailing-slash-issue-in-the-invalid-chrome-extension-manifest-file/) fixed.
 ###13/11/2012
 **Version 0.4** - Code refactoring.
 ###04/10/2012
